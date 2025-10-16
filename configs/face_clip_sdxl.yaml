@@ -1,0 +1,26 @@
+model:
+  target: train.model.diffusion.ddpm_sdxl.DDPM_FaceCLIPSDxl
+  params:
+    encoders:
+      image_text_encoder_config:
+        target: train.model.diffusion.encoder_wrapper.FaceCLIP_L_G_Wrapper
+        instance_name: 'text_image_encoder'
+        trainable: true
+        drop_probability: 0.1
+        params: null
+
+    first_stage_config:
+      target: core.vae.vae.BasicSDxlVAE
+      instance_name: "first_stage_model"
+      trainable: false
+      params:
+        precision: torch.bfloat16
+
+    unet_config:
+      target: core.unet.unet_2d_condition.MyUNet2DConditionModel
+      trainable: true
+      from_pretrained: stabilityai/stable-diffusion-xl-base-1.0
+      sub_folder: unet
+      precision: torch.bfloat16
+      reset_unet_cross_attn: false
+      params: null

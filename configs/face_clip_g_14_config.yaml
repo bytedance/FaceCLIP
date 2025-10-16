@@ -1,0 +1,12 @@
+model:
+  text_image_branch_config:
+    target: core.face_clip.face_clip.TextImageBranch
+    instance_name: text_image_branch
+    trainable: true
+    params:
+      text_embed_dim: 1280
+      init_logit_bias: -10
+      cast_dtype: torch.bfloat16
+      text_model_name: ViT-bigG-14
+      pretrained: metaclip_fullcc
+      face_model_path: ""
