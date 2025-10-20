@@ -1,5 +1,3 @@
-// Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
-
 #include "MsDeformAttn/ms_deform_attn.h"
 
 namespace groundingdino {
