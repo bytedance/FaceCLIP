@@ -15,7 +15,6 @@ pip3 install opencv-python
 pip3 install diffusers==0.33.1
 pip3 install transformers==4.45.2
 pip3 install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
-pip3 install git+ssh://git@code.byted.org/us_cv/voyager_inspireface.git
 pip3 install httpx==0.23
 pip3 install tenacity
 pip3 install huggingface_hub[hf_transfer]
