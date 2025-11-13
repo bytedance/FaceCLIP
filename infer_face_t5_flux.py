@@ -136,6 +136,7 @@ def do_inference(model, aligned_face_image, text, num_images):
             num_images_per_prompt=num_images,
             height=1152,
             width=864,
+            generator=torch.manual_seed(453563)
         ).images[0]
     return res
 
